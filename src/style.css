@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #180439;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: linear-gradient(90deg, #180439 -50%, #1B1664 50%, #180439 150%);
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    appearance: textfield;
+  }
+
+  .grecaptcha-badge {
+    visibility: hidden !important;
+  }
+
+  .bounce-enter-active {
+    animation: bounce-in 0.5s;
+  }
+
+  .bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      background: linear-gradient(90deg, #170337 0%, #1f1a6c 50%, #170337 100%);
+    }
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+}
